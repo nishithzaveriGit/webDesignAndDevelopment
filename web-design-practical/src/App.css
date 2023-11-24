@@ -56,6 +56,61 @@
 .background-step-4 {
 	background: url("./assets/step4.png") 0 0 no-repeat;
 }
+
+.workforce-container .workforce-bg {
+	background: url("./assets/workforce-bg.png") left bottom no-repeat;
+	height: 175px;
+}
+
+.workforce-container .list-group-item {
+	padding-left: 40px;
+	background: url("./assets/bullet.png") 0 11px no-repeat;
+	background-size: 25px 25px;
+}
+
+.customers-container {
+	position: relative;
+}
+
+.customers-container .right-bg,
+.customers-container .left-bg {
+	position: absolute;
+	top: 50%;
+	width: 150px;
+	height: 150px;
+}
+.customers-container .left-bg {
+	left: 0;
+	background: url("./assets/customer-left-bg.png") 0 0 no-repeat;
+	background-size: contain;
+}
+.customers-container .right-bg {
+	right: 0;
+	background: url("./assets/customer-right-bg.png") 0 0 no-repeat;
+	background-size: contain;
+}
+
+.customers-container
+	.react-multi-carousel-list
+	.react-multi-carousel-track
+	.react-multi-carousel-item {
+	padding-left: 45px !important;
+	margin-right: 12px !important;
+	padding-right: 15px !important;
+}
+.customers-container .react-multiple-carousel__arrow--left {
+	left: 0 !important;
+}
+.customers-container .feedback {
+	position: absolute;
+	left: 50%;
+	bottom: -1px;
+	width: auto;
+	padding: 10px;
+	background-color: #f5f8ff;
+	padding: 10px;
+}
+
 @media only screen and (max-width: 767px) {
 	.background-step-1,
 	.background-step-2,
@@ -63,4 +118,37 @@
 	.background-step-4 {
 		width: 50%;
 	}
+}
+
+@media (max-width: 767px) {
+	.carousel-inner .carousel-item > div {
+		display: none;
+	}
+	.carousel-inner .carousel-item > div:first-child {
+		display: block;
+	}
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+	display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+	.carousel-inner .carousel-item-end.active,
+	.carousel-inner .carousel-item-next {
+		transform: translateX(25%);
+	}
+
+	.carousel-inner .carousel-item-start.active,
+	.carousel-inner .carousel-item-prev {
+		transform: translateX(-25%);
+	}
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start {
+	transform: translateX(0);
 }
